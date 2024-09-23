@@ -112,14 +112,14 @@ La larghezza % è assegnata solo agli elementi laterali così che il centro occu
     gap: 20px;
 }
 
-.jumbotron-button {
+.button-style {
     padding: 12px 25px;
     font-size: 1.2rem;
     border: 0px;
     border-radius: 35px;
 }
 
-.jumbotron-button.dark {
+.button-style.dark {
     background-color: #23272a;
     color: white;
 }
@@ -133,7 +133,6 @@ La larghezza % è assegnata solo agli elementi laterali così che il centro occu
 
 .alternate_rows > .container {
     display: flex;
-    justify-content: start;
 }
 
 .alternate_rows.odd {
@@ -157,11 +156,17 @@ La larghezza % è assegnata solo agli elementi laterali così che il centro occu
     gap: 20px;
 }
 
-.content_txt > h2 {
+.h2-content{
     font-size: 3rem;
 }
 
-.content_txt > p {
+.h3-content {
+    font-size: 2rem;
+    margin-bottom: 50px;
+
+}
+
+.p-content {
     font-size: 1.2rem;
     line-height: 2rem;
 }
@@ -170,10 +175,26 @@ La larghezza % è assegnata solo agli elementi laterali così che il centro occu
     width: 60%;
 }
 
-.wide_img {
-    width:100%;
-    background-color: greenyellow;
+.content-wide {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap:20px;
 }
+
+.stars {
+    padding: 50px 0;
+    background-image: url(../img/stars.svg);
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+.button-style.light {
+    background-color: #7289da;
+    color: white;
+}
+
+
 
 /* CORREZIONE !!!
 per la larghezza delle due colonne, img e txt, usare la proprietà flex-basis: x% così che si abbian proporzioni ideali, al posto della sola width.
