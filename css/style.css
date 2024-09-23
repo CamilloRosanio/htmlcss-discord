@@ -273,10 +273,8 @@ footer {
 }
 
 .multi-column {
-    border: 1px dashed white;
     flex-grow: 1;
     display: flex;
-    height: 300px;
 }
 
 .multi-column .col {
