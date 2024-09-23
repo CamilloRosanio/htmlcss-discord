@@ -4,7 +4,6 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    border:1px dashed black;
 }
 
 
@@ -21,8 +20,8 @@
 /* # HEADER----------------------------------- */
 
 .header_page {
-    background-color: rgb(255, 187, 187);
-    padding: 10px;
+    background-color: #255ee9;
+    padding: 20px;
 }
 
 .header_page >.container {
@@ -33,7 +32,8 @@
 .header_page >.container > .side {
     display:flex;
     align-items: center;
-    width:200px;
+    flex-grow: 1;
+    flex-basis: 20%;
 }
 
 .logo-container {
@@ -41,17 +41,31 @@
 }
 
 .nav-bar {
+    display: flex;
     text-align: center;
-    width: 600px;
+    flex-grow: 1;
+    justify-content: space-around;
+    gap: 15px;
 }
 
-.menu_item {
-    display: inline-block
+.menu-link {
+    text-decoration: none;
+    color: white;
 }
 
 .login-container {
     justify-content: end;
 }
+
+.login-button {
+    background-color: white;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 35px;
+    border: 0px;
+}
+
+
 
 /* CORREZIONE !!!
 Sbagliato assegnare i px di larghezza perchè poi vincolerebbero tutto il restante contenuto. Molto meglio elementi "relativi" e dinamici.
@@ -65,16 +79,49 @@ La larghezza % è assegnata solo agli elementi laterali così che il centro occu
 /* # JUMBOTRON----------------------------------- */
 
 .jumbotron {
-    background-color: blue;
+    background-image: url(../img/jumbo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
     padding:20px;
     display: flex;
     justify-content: center;
 }
 
 .j_container {
-    background-color: aqua;
-    width: 650px;
-    height: 300px;
+    padding: 100px 0;
+    text-align: center;
+    flex-basis: 50%;
+}
+
+.j_container > h1 {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.j_container > p {
+    color: white;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    margin-bottom: 20px;
+}
+
+.j_button-container {
+    display:flex;
+    justify-content:center;
+    gap: 20px;
+}
+
+.jumbotron-button {
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    border: 0px;
+    border-radius: 35px;
+}
+
+.jumbotron-button.dark {
+    background-color: #23272a;
+    color: white;
 }
 
 
@@ -163,6 +210,9 @@ footer {
 
 Al posto dei <p> per indicare le multi-colonne, era meglio impiegare direttamente un <div>.
 */
+
+
+
 
 
 /* # DEBUG----------------------------------- */
