@@ -4,6 +4,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: "Open Sans", sans-serif;
 }
 
 
@@ -16,6 +17,74 @@
     max-width: 100%;
   }
 
+  .button-style {
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    border: 0px;
+    border-radius: 35px;
+}
+
+.button-style.dark {
+    background-color: #23272a;
+    color: white;
+}
+
+.button-style.light {
+    background-color: #7289da;
+    color: white;
+}
+
+.small-button {
+    background-color: white;
+    padding: 10px 25px;
+    border-radius: 35px;
+    border: 0px;
+}
+
+.small-button.light {
+    background-color: #7289da;
+    color: white;
+}
+
+.h2-content{
+    font-size: 3rem;
+}
+
+.h3-content {
+    font-size: 2rem;
+    margin-bottom: 50px;
+}
+
+.p-content {
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
+.footer-text.title {
+    color: #7289da;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.footer-text.link {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.wave {
+    width: 100%;
+    height: 100px;
+    background-color: rgb(0, 255, 13);
+    background-image: url(../img/wave.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.wave.dark {
+
+}
 
 /* # HEADER----------------------------------- */
 
@@ -57,13 +126,6 @@
     justify-content: end;
 }
 
-.login-button {
-    background-color: white;
-    font-weight: bold;
-    padding: 10px 25px;
-    border-radius: 35px;
-    border: 0px;
-}
 
 
 
@@ -112,18 +174,6 @@ La larghezza % è assegnata solo agli elementi laterali così che il centro occu
     gap: 20px;
 }
 
-.button-style {
-    padding: 12px 25px;
-    font-size: 1.2rem;
-    border: 0px;
-    border-radius: 35px;
-}
-
-.button-style.dark {
-    background-color: #23272a;
-    color: white;
-}
-
 
 /* # SECTIONS----------------------------------- */
 
@@ -156,21 +206,6 @@ La larghezza % è assegnata solo agli elementi laterali così che il centro occu
     gap: 20px;
 }
 
-.h2-content{
-    font-size: 3rem;
-}
-
-.h3-content {
-    font-size: 2rem;
-    margin-bottom: 50px;
-
-}
-
-.p-content {
-    font-size: 1.2rem;
-    line-height: 2rem;
-}
-
 .content_img {
     width: 60%;
 }
@@ -189,11 +224,6 @@ La larghezza % è assegnata solo agli elementi laterali così che il centro occu
     background-position: center top;
 }
 
-.button-style.light {
-    background-color: #7289da;
-    color: white;
-}
-
 
 
 /* CORREZIONE !!!
@@ -208,36 +238,55 @@ Bisognava usare "nth-child odd/even" per alternare automaticamente i colori di s
 /* # FOOTER----------------------------------- */
 
 footer {
-    background-color: rgb(61, 61, 61);
+    background-color: #23272a;
     padding:20px;
 }
 
 .footer_multi-column {
     display: flex;
     margin-bottom: 20px;
-    padding: 20px 0;
-    border-bottom: 2px solid white;
+    padding: 40px 0;
+    border-bottom: 1px solid #7289da;
+    gap:20px;
 }
 
 .single-column {
-    background-color: aquamarine;
-    width: 36%;
+    flex-basis: 25%;
+    display:flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
+}
+
+.single-column > .h3-content {
+    font-size: 1.8rem;
+    color:#7289da;
+    margin-bottom: 0;
+}
+
+.language-selection {
+    height: 1rem;
+}
+
+.language-img {
+    height: 1rem;
 }
 
 .multi-column {
-    background-color: rgb(61, 180, 140);
+    border: 1px dashed white;
+    flex-grow: 1;
     display: flex;
-    width: 64%;
     height: 300px;
 }
 
 .multi-column .col {
     width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .footer-nav {
-    background-color: rgb(221, 123, 123);
-    height: 40px;
     display:flex;
     align-items: center;
     justify-content: space-between;
