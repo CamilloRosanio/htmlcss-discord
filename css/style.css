@@ -128,30 +128,46 @@ La larghezza % è assegnata solo agli elementi laterali così che il centro occu
 /* # SECTIONS----------------------------------- */
 
 .alternate_rows {
-    padding:20px;
+    padding:120px 0;
+}
+
+.alternate_rows > .container {
+    display: flex;
+    justify-content: start;
 }
 
 .alternate_rows.odd {
-    background-color: rgb(233, 233, 233);
+    background-color: white;
 }
 
 .alternate_rows.even {
-    background-color: rgb(207, 207, 207);
+    background-color: #f6f6f6;
 }
 
 .section_content {
     display: flex;
-    height: 200px;
+    gap: 20px;
+    justify-content: space-between;
 }
 
 .content_txt {
-    width:30%;
-    background-color:rgb(255, 170, 72);
+    width:40%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.content_txt > h2 {
+    font-size: 3rem;
+}
+
+.content_txt > p {
+    font-size: 1.2rem;
+    line-height: 2rem;
 }
 
 .content_img {
-    width:70%;
-    background-color: rgb(215, 171, 255);
+    width: 60%;
 }
 
 .wide_img {
