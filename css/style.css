@@ -1,0 +1,191 @@
+/* # RESET----------------------------------- */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border:1px dashed black;
+}
+
+
+/* # UTILS----------------------------------- */
+
+.container {
+    margin: 0 auto;
+    padding: 0 10px;
+    width: 1000px;
+    max-width: 100%;
+  }
+
+
+/* # HEADER----------------------------------- */
+
+.header_page {
+    background-color: rgb(255, 187, 187);
+    padding: 10px;
+}
+
+.header_page >.container {
+    display:flex;
+    align-items: center;
+}
+
+.header_page >.container > .side {
+    display:flex;
+    align-items: center;
+    width:200px;
+}
+
+.logo-container {
+    justify-content: start;
+}
+
+.nav-bar {
+    text-align: center;
+    width: 600px;
+}
+
+.menu_item {
+    display: inline-block
+}
+
+.login-container {
+    justify-content: end;
+}
+
+/* CORREZIONE !!!
+Sbagliato assegnare i px di larghezza perchè poi vincolerebbero tutto il restante contenuto. Molto meglio elementi "relativi" e dinamici.
+
+Per far si che i contenuti del flex occupino tutto il container i larghezza, si può dare "flex-grow: 1", quindi permettergli di crescere.
+
+In combinazione si può usare width: %  assegnata alla flex-basis (cioè mantieni idealmente la grandezza di *tot).
+La larghezza % è assegnata solo agli elementi laterali così che il centro occupi il restante. */
+
+
+/* # JUMBOTRON----------------------------------- */
+
+.jumbotron {
+    background-color: blue;
+    padding:20px;
+    display: flex;
+    justify-content: center;
+}
+
+.j_container {
+    background-color: aqua;
+    width: 650px;
+    height: 300px;
+}
+
+
+/* # SECTIONS----------------------------------- */
+
+.alternate_rows {
+    padding:20px;
+}
+
+.alternate_rows.odd {
+    background-color: rgb(233, 233, 233);
+}
+
+.alternate_rows.even {
+    background-color: rgb(207, 207, 207);
+}
+
+.section_content {
+    display: flex;
+    height: 200px;
+}
+
+.content_txt {
+    width:30%;
+    background-color:rgb(255, 170, 72);
+}
+
+.content_img {
+    width:70%;
+    background-color: rgb(215, 171, 255);
+}
+
+.wide_img {
+    width:100%;
+    background-color: greenyellow;
+}
+
+/* CORREZIONE !!!
+per la larghezza delle due colonne, img e txt, usare la proprietà flex-basis: x% così che si abbian proporzioni ideali, al posto della sola width.
+
+SFONDI ALTERNATI
+Bisognava usare "nth-child odd/even" per alternare automaticamente i colori di sfondo. Ragionando appunto sul contenitore principale del main e le sue sottosezioni.
+
+*/
+
+
+/* # FOOTER----------------------------------- */
+
+footer {
+    background-color: rgb(61, 61, 61);
+    padding:20px;
+}
+
+.footer_multi-column {
+    display: flex;
+    margin-bottom: 20px;
+    padding: 20px 0;
+    border-bottom: 2px solid white;
+}
+
+.single-column {
+    background-color: aquamarine;
+    width: 36%;
+}
+
+.multi-column {
+    background-color: rgb(61, 180, 140);
+    display: flex;
+    width: 64%;
+    height: 300px;
+}
+
+.multi-column .col {
+    width: 25%;
+}
+
+.footer-nav {
+    background-color: rgb(221, 123, 123);
+    height: 40px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* anche qui per le varie larghezze delle colonne avrei dovuto usare flex-basis: x%, cioè come sempre la grandezza "ideale". 
+
+Al posto dei <p> per indicare le multi-colonne, era meglio impiegare direttamente un <div>.
+*/
+
+
+/* # DEBUG----------------------------------- */
+
+/* .debug {
+    background-color: aqua;
+    padding: 10px;
+    border: 1px dotted black;
+}
+
+.debug .debug {
+    background-color: rgb(231, 136, 255);
+}
+
+.debug .debug .debug {
+    background-color: rgb(0, 255, 106);
+}
+
+.debug .debug .debug .debug {
+    background-color: rgb(255, 191, 0);
+}
+
+.debug .debug .debug .debug .debug {
+    background-color: rgb(255, 98, 0);
+} */
+
