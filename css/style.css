@@ -1,297 +1,295 @@
 /* # RESET----------------------------------- */
 
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-family: "Open Sans", sans-serif;
-}
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        font-family: "Open Sans", sans-serif;
+    }
 
 
 /* # UTILS----------------------------------- */
 
-.container {
-    margin: 0 auto;
-    padding: 0 10px;
-    width: 1000px;
-    max-width: 100%;
-  }
+    .container {
+        margin: 0 auto;
+        padding: 0 10px;
+        width: 1000px;
+        max-width: 100%;
+    }
 
-  .button-style {
-    padding: 12px 25px;
-    font-size: 1.2rem;
-    border: 0px;
-    border-radius: 35px;
-}
+    .button-style {
+        padding: 12px 25px;
+        font-size: 1.2rem;
+        border: 0px;
+        border-radius: 35px;
+    }
 
-.button-style.dark {
-    background-color: #23272a;
-    color: white;
-}
+    .button-style.dark {
+        background-color: #23272a;
+        color: white;
+    }
 
-.button-style.light {
-    background-color: #7289da;
-    color: white;
-}
+    .button-style.light {
+        background-color: #7289da;
+        color: white;
+    }
 
-.small-button {
-    background-color: white;
-    padding: 10px 25px;
-    border-radius: 35px;
-    border: 0px;
-}
+    .small-button {
+        background-color: white;
+        padding: 10px 25px;
+        border-radius: 35px;
+        border: 0px;
+    }
 
-.small-button.light {
-    background-color: #7289da;
-    color: white;
-}
+    .small-button.light {
+        background-color: #7289da;
+        color: white;
+    }
 
-.h2-content{
-    font-size: 3rem;
-}
+    .h2-content{
+        font-size: 3rem;
+    }
 
-.h3-content {
-    font-size: 2rem;
-    margin-bottom: 50px;
-}
+    .h3-content {
+        font-size: 2rem;
+        margin-bottom: 50px;
+    }
 
-.p-content {
-    font-size: 1.2rem;
-    line-height: 2rem;
-}
+    .p-content {
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
 
-.footer-text.title {
-    color: #7289da;
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: bold;
-}
+    .footer-text.title {
+        color: #7289da;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: bold;
+    }
 
-.footer-text.link {
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-}
+    .footer-text.link {
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+    }
 
-.wave-container {
-    width: 100%;
-    height: 150px;
-    background-color: greenyellow;
-  }
+    .wave {
+        width: 100%;
+        color: red;
+    }
 
-.wave {
-    width: 100%;
-    fill: green;
-}
+    /* CORREZIONE !!!
+    Per aprire la SVG (wave in questo caso), aprirla in una finestra a parte su VSCODE, analizzarne il contenuto, le classi e i vari "componenti", assegnare la classe giusta e poi salvare. A quel punto si può copiare il codice della SVG, inserendolo nell'HTML e dando i colori e le caratteristiche con la classe.
+
 
 /* # HEADER----------------------------------- */
 
-.header_page {
-    background-color: #255ee9;
-    padding: 20px;
-}
+    .header_page {
+        background-color: #255ee9;
+        padding: 20px;
+    }
 
-.header_page >.container {
-    display:flex;
-    align-items: center;
-}
+    .header_page >.container {
+        display:flex;
+        align-items: center;
+    }
 
-.header_page >.container > .side {
-    display:flex;
-    align-items: center;
-    flex-grow: 1;
-    flex-basis: 20%;
-}
+    .header_page >.container > .side {
+        display:flex;
+        align-items: center;
+        flex-grow: 1;
+        flex-basis: 20%;
+    }
 
-.logo-container {
-    justify-content: start;
-}
+    .logo-container {
+        justify-content: start;
+    }
 
-.nav-bar {
-    display: flex;
-    text-align: center;
-    flex-grow: 1;
-    justify-content: space-around;
-    gap: 15px;
-}
+    .nav-bar {
+        display: flex;
+        text-align: center;
+        flex-grow: 1;
+        justify-content: space-around;
+        gap: 15px;
+    }
 
-.menu-link {
-    text-decoration: none;
-    color: white;
-}
+    .menu-link {
+        text-decoration: none;
+        color: white;
+    }
 
-.login-container {
-    justify-content: end;
-}
-
-
+    .login-container {
+        justify-content: end;
+    }
 
 
-/* CORREZIONE !!!
-Sbagliato assegnare i px di larghezza perchè poi vincolerebbero tutto il restante contenuto. Molto meglio elementi "relativi" e dinamici.
 
-Per far si che i contenuti del flex occupino tutto il container i larghezza, si può dare "flex-grow: 1", quindi permettergli di crescere.
 
-In combinazione si può usare width: %  assegnata alla flex-basis (cioè mantieni idealmente la grandezza di *tot).
-La larghezza % è assegnata solo agli elementi laterali così che il centro occupi il restante. */
+    /* CORREZIONE !!!
+    Sbagliato assegnare i px di larghezza perchè poi vincolerebbero tutto il restante contenuto. Molto meglio elementi "relativi" e dinamici.
+
+    Per far si che i contenuti del flex occupino tutto il container i larghezza, si può dare "flex-grow: 1", quindi permettergli di crescere.
+
+    In combinazione si può usare width: %  assegnata alla flex-basis (cioè mantieni idealmente la grandezza di *tot).
+    La larghezza % è assegnata solo agli elementi laterali così che il centro occupi il restante. */
 
 
 /* # JUMBOTRON----------------------------------- */
 
-.jumbotron {
-    background-image: url(../img/jumbo.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding:20px;
-    display: flex;
-    justify-content: center;
-}
+    .jumbotron {
+        background-image: url(../img/jumbo.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding:20px;
+        display: flex;
+        justify-content: center;
+    }
 
-.j_container {
-    padding: 100px 0;
-    text-align: center;
-    flex-basis: 50%;
-}
+    .j_container {
+        padding: 100px 0;
+        text-align: center;
+        flex-basis: 50%;
+    }
 
-.j_container > h1 {
-    color: white;
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
+    .j_container > h1 {
+        color: white;
+        font-size: 3rem;
+        margin-bottom: 20px;
+    }
 
-.j_container > p {
-    color: white;
-    font-size: 1.2rem;
-    line-height: 2rem;
-    margin-bottom: 20px;
-}
+    .j_container > p {
+        color: white;
+        font-size: 1.2rem;
+        line-height: 2rem;
+        margin-bottom: 20px;
+    }
 
-.j_button-container {
-    display:flex;
-    justify-content:center;
-    gap: 20px;
-}
+    .j_button-container {
+        display:flex;
+        justify-content:center;
+        gap: 20px;
+    }
 
 
 /* # SECTIONS----------------------------------- */
 
-.alternate_rows {
-    padding:120px 0;
-}
+    .alternate_rows {
+        padding:120px 0;
+    }
 
-.alternate_rows > .container {
-    display: flex;
-}
+    .alternate_rows > .container {
+        display: flex;
+    }
 
-.alternate_rows.odd {
-    background-color: white;
-}
+    .alternate_rows.odd {
+        background-color: white;
+    }
 
-.alternate_rows.even {
-    background-color: #f6f6f6;
-}
+    .alternate_rows.even {
+        background-color: #f6f6f6;
+    }
 
-.section_content {
-    display: flex;
-    gap: 20px;
-    justify-content: space-between;
-}
+    .section_content {
+        display: flex;
+        gap: 20px;
+        justify-content: space-between;
+    }
 
-.content_txt {
-    width:40%;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
+    .content_txt {
+        width:40%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
 
-.content_img {
-    width: 60%;
-}
+    .content_img {
+        width: 60%;
+    }
 
-.content-wide {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    gap:20px;
-}
+    .content-wide {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap:20px;
+    }
 
-.stars {
-    padding: 50px 0;
-    background-image: url(../img/stars.svg);
-    background-repeat: no-repeat;
-    background-position: center top;
-}
+    .stars {
+        padding: 50px 0;
+        background-image: url(../img/stars.svg);
+        background-repeat: no-repeat;
+        background-position: center top;
+    }
 
 
 
-/* CORREZIONE !!!
-per la larghezza delle due colonne, img e txt, usare la proprietà flex-basis: x% così che si abbian proporzioni ideali, al posto della sola width.
+    /* CORREZIONE !!!
+    per la larghezza delle due colonne, img e txt, usare la proprietà flex-basis: x% così che si abbian proporzioni ideali, al posto della sola width.
 
-SFONDI ALTERNATI
-Bisognava usare "nth-child odd/even" per alternare automaticamente i colori di sfondo. Ragionando appunto sul contenitore principale del main e le sue sottosezioni.
+    SFONDI ALTERNATI
+    Bisognava usare "nth-child odd/even" per alternare automaticamente i colori di sfondo. Ragionando appunto sul contenitore principale del main e le sue sottosezioni.
 
-*/
+    */
 
 
 /* # FOOTER----------------------------------- */
 
-footer {
-    background-color: #23272a;
-    padding:20px;
-}
+    footer {
+        background-color: #23272a;
+        padding:20px;
+    }
 
-.footer_multi-column {
-    display: flex;
-    margin-bottom: 20px;
-    padding: 40px 0;
-    border-bottom: 1px solid #7289da;
-    gap:20px;
-}
+    .footer_multi-column {
+        display: flex;
+        margin-bottom: 20px;
+        padding: 40px 0;
+        border-bottom: 1px solid #7289da;
+        gap:20px;
+    }
 
-.single-column {
-    flex-basis: 25%;
-    display:flex;
-    flex-direction: column;
-    align-items: start;
-    gap: 15px;
-}
+    .single-column {
+        flex-basis: 25%;
+        display:flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 15px;
+    }
 
-.single-column > .h3-content {
-    font-size: 1.8rem;
-    color:#7289da;
-    margin-bottom: 0;
-}
+    .single-column > .h3-content {
+        font-size: 1.8rem;
+        color:#7289da;
+        margin-bottom: 0;
+    }
 
-.language-selection {
-    height: 1rem;
-}
+    .language-selection {
+        height: 1rem;
+    }
 
-.language-img {
-    height: 1rem;
-}
+    .language-img {
+        height: 1rem;
+    }
 
-.multi-column {
-    flex-grow: 1;
-    display: flex;
-}
+    .multi-column {
+        flex-grow: 1;
+        display: flex;
+    }
 
-.multi-column .col {
-    width: 25%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
+    .multi-column .col {
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
 
-.footer-nav {
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
-}
+    .footer-nav {
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 
-/* anche qui per le varie larghezze delle colonne avrei dovuto usare flex-basis: x%, cioè come sempre la grandezza "ideale". 
+    /* anche qui per le varie larghezze delle colonne avrei dovuto usare flex-basis: x%, cioè come sempre la grandezza "ideale". 
 
-Al posto dei <p> per indicare le multi-colonne, era meglio impiegare direttamente un <div>.
-*/
+    Al posto dei <p> per indicare le multi-colonne, era meglio impiegare direttamente un <div>.
+    */
 
 
 
